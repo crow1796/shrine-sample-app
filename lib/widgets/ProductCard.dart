@@ -15,21 +15,23 @@ class ProductCard extends Card {
                                         fit: BoxFit.fitWidth,
                                     )
                                 ),
-                                Padding(
-                                    padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
-                                    child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                            Text(
-                                                product.title,
-                                                style: Theme.of(context).textTheme.title,
-                                                maxLines: 1,
-                                            ),
-                                            SizedBox(height: 8.0),
-                                            Text(
-                                                product.price.toString(),
-                                            style: Theme.of(context).textTheme.body1)
-                                        ],
+                                Expanded(
+                                    child: Padding(
+                                        padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
+                                        child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                                Text(
+                                                    product.title,
+                                                    style: Theme.of(context).textTheme.title,
+                                                    maxLines: 1,
+                                                ),
+                                                SizedBox(height: 8.0),
+                                                Text(
+                                                    product.price.toString(),
+                                                style: Theme.of(context).textTheme.body1)
+                                            ],
+                                        )
                                     )
                                 )
                             ],
